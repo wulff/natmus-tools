@@ -39,7 +39,7 @@ Usage:
 
     gif.sh <asset id> <width in pixels>
 
-Create a 480 pixel wide animated GIF of the Trundholm sun chariot.
+Create a 480 pixel wide animated GIF of the Trundholm sun chariot:
 
     gif.sh 11006 480
 
@@ -49,6 +49,6 @@ Usage:
 
     scrape.pl [-c <COLLECTION>] -l -o <OUTPUT_FILE> -n <NUMBER_OF_RESULTS> -t <THROTTLE> -v
 
-Get all assets with an open license from the DNT collection and store the result in `natmus.json`. Be verbose.
+Get all assets with an open license from the DNT collection and store the result in `natmus.json`. Be verbose:
 
     scrape.pl -c DNT -l -o ./natmus.json -v
