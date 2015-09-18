@@ -6,9 +6,9 @@ A collection of command line tools for working with the API provided by the Nati
 Tools
 -----
 
-- **color.sh:**
+- **color.sh:** Extract dominant colors from pictures in the collection.
 - **gif.sh:** Create animated GIFs from any *rotationsbilleder* in the collection.
-- **scrape.pl:**
+- **scrape.pl:** Scrape asset metadata filtered by collection and license type.
 
 You need to have a recent version of *ImageMagick* installed to use the `color.sh` and `gif.sh` scripts.
 
