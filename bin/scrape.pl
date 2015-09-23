@@ -73,6 +73,8 @@ my $api_host  = 'testapi.natmus.dk';
 my $api_path  = '/v1/Search/';
 my $api_query = 'query=(type:asset)';
 
+my %license = map { $_ => 1 } ('CC-BY-SA', 'CC-BY-ND', 'Public Domain');
+
 $|++;
 
 # get command line options
@@ -125,8 +127,8 @@ for my $step (1..$steps) {
   my $json = get($url);
 
   foreach my $result (@{$json->{Results}}) {
-    if ($opts{'l'}) {
-      push $output, $result if $result->{license} eq 'CC-BY-SA';
+    if ($opts{'l'} and exists $result->{license}) {
+      push $output, $result if exists $license{$result->{license}};
     }
     else {
       push $output, $result;
